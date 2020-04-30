@@ -4,7 +4,6 @@ $url="";
 if($_POST["url"]!="")
 {
 	$imageCount=0;$internalCount=0;$externalCount=0;$pageLoad=0;$wordCount=0;$titleLength=0;
-	//$url = 'https://agencyanalytics.com';
 	$url = parse_url($_POST["url"], PHP_URL_SCHEME) === null ? 'http://' . $_POST["url"] : $_POST["url"];
 	$pages = 5;
 	$crawler = new Crawler($url,$pages); // create an object of Crawler class
